@@ -1309,12 +1309,12 @@ if __name__ == '__main__':
 
         def finish_request(self, request, client_address):
             self.RequestHandlerClass(request, client_address, self,
-                                     directory=args.directory)
+                                     directory="a\srv")
 
     test(
-        HandlerClass=handler_class,
+        HandlerClass=CGIHTTPRequestHandler,
         ServerClass=DualStackServer,
-        port=args.port,
+        port=80,
         bind=args.bind,
         protocol=args.protocol,
     )

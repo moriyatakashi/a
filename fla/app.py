@@ -4,8 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 app = Flask(__name__)
 
-#db_uri = "sqlite:///test.db"
-db_uri = os.environ.get('DATABASE_URL') #or "postgresql://localhost/flasknote"
+db_uri = "sqlite:///test.db"
+# db_uri = os.environ.get('DATABASE_URL') #or "postgresql://localhost/flasknote"
 app.config["SQLALCHEMY_DATABASE_URI"] = db_uri
 db = SQLAlchemy(app)
 
